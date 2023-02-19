@@ -26,6 +26,13 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.testcontainers</groupId>
+				<artifactId>testcontainers-bom</artifactId>
+				<version>1.17.6</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -55,16 +62,28 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<!--		add mongoDb driver and dependency for seeding data-->
 		<dependency>
 			<groupId>com.github.cloudyrock.mongock</groupId>
 			<artifactId>mongock-spring-v5</artifactId>
-			<version>4.3.8</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.cloudyrock.mongock</groupId>
 			<artifactId>mongodb-springdata-v3-driver</artifactId>
 			<version>4.3.8</version>
 		</dependency>
+<!--		add dependencies for testing -->
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>mongodb</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 
